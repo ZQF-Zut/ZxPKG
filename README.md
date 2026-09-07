@@ -51,15 +51,25 @@ bootstrap-vcpkg.bat
 
 #### update versions database
 
+- Windows
 ```shell
 .\.vcpkg\vcpkg.exe --x-builtin-ports-root=./ports --x-builtin-registry-versions-dir=./versions x-add-version --all --verbose
 ```
 
+- Unix
+```shell
+.\.vcpkg\vcpkg --x-builtin-ports-root=./ports --x-builtin-registry-versions-dir=./versions x-add-version --all --verbose
+```
+
 #### testing port
 
+- Windows
 ```shell
 .\.vcpkg\vcpkg.exe install zqf-cmake-modules --overlay-ports=ports --x-install-root=.build/installed --downloads-root=.build/downloads --x-buildtrees-root=.build/buildtrees --x-packages-root=.build/packages
 ```
 
-
+- Unix
+```shell
+.\.vcpkg\vcpkg install zqf-cmake-modules --overlay-ports=ports --x-install-root=.build/installed --downloads-root=.build/downloads --x-buildtrees-root=.build/buildtrees --x-packages-root=.build/packages
+```
 
